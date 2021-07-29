@@ -252,6 +252,7 @@ def unfollow():
 
 @app.route('/user/<email>', methods=['GET','POST','ET'])
 def user(email):
+    
     userPostings = list(collections2.find({"user": email}))
     currentUserPostings = list(collections2.find({"user": session['username']}))
     dash = []
