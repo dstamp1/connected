@@ -43,8 +43,6 @@ def start():
 
 @app.route('/index')
 def index():
-<<<<<<< Updated upstream
-=======
     # session['username'] = ""
     # if session['username'] == "":
     #     loggedIn = false
@@ -52,17 +50,13 @@ def index():
     # else:
     #     loggedIn = true 
     #     return render_template('index.html', loggedIn = loggedIn)
->>>>>>> Stashed changes
     return render_template('index.html')
 
 
 @app.route('/dashboard', methods=['GET','POST','ET'])
 def dashboard():
-<<<<<<< Updated upstream
     if session['username'] == "":
         return redirect(url_for('login'))
-=======
->>>>>>> Stashed changes
     if request.method == "POST":
         id = request.form['objectID']
         posting = collections2.insert(collections.find({"_id":ObjectId(id)}, {"_id": 0}))
